@@ -50,7 +50,7 @@ for i in adResultOuter:
 	## will step into main process if attribute key is in AD record 
 	if 'attributes' in i.keys(): 
 
-		qimaSMTP = 'smtp:' + i['attributes']['sAMAccountName'] + '@qima.com'
+		qimaSMTP = 'smtp:' + i['attributes']['sAMAccountName'] + '@abc.com'
 
 		try:
 			adReturn = ad.ADconn.modify(i['dn'],{'proxyAddresses': (MODIFY_ADD, [qimaSMTP])})
