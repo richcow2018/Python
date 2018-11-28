@@ -20,7 +20,7 @@ from mysql.connector import MySQLConnection, Error
 
 def query_with_fetchall():
     try:
-        conn = mysql.connector.connect(host='mysql.comp.polyu.edu.hk',database='17005589g',user='17005589g',password='oxcdcrlp')
+        conn = mysql.connector.connect(host='',database='',user='',password='')
         cursor = conn.cursor()
         cursor.execute("* FROM customers order by creditLimit DESC limit 10 ")
  
@@ -78,7 +78,7 @@ def write_file(data, filename):
     with open(filename, 'wb') as f:
         f.write(data)
 
-conn = mysql.connector.connect(host='mysql.comp.polyu.edu.hk',database='17005589g',user='17005589g',password='oxcdcrlp',use_unicode=False)
+conn = mysql.connector.connect(host='',database='',user='',password='',use_unicode=False)
 cursor = conn.cursor()
 
 query = "SELECT image FROM productlines WHERE productline = 'Planes'"
