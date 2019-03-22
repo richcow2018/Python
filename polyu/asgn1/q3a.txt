@@ -1,0 +1,7 @@
+First of all, we will import random function from the python library in line 1. 
+Second, we declare a variable starting from zero for the number of guesses made in line 2. 
+Third, we use random function to initiate a number between 1 to 20 in line 4. 
+Fourth, we will use a while loop condition which means guess action can be made from 0 to 5, total 6 times repeat trials in line 6. 
+Fifth, each time when user inputs a number, the guess_made counter will add one in line 8. 
+Sixth, program will provide hints in line 9 and 10 if guessing number is bigger or smaller than the answer.  
+At last, if the guessing number is equal to randomly picked number, program will print a bingo statement and dropout the loop in line 11. Line 12 is abnormal and will explain in next answer sheet.

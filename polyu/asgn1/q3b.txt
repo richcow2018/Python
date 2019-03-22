@@ -1,0 +1,28 @@
+Line 12 is the problem. It is logic error. When user enters a smaller number, he will get a statement "Your guess is too low". Then following the next condition in line 11 his guess is not equal to number, the else condition will show the answer. 
+
+We should display the final answer outside the while loop. Therefore, when user finish 6 times trial, he will get the answer at the end. 
+
+Also prevent the input the wrong value, I will put try and except. Below is my fine tuned code.
+
+import random
+guess = 0
+guesses_made = 0
+name = raw_input("what is your name?\n")
+number = random.randint(1,20)
+print "Well,", name, ",I am thinking of a number between 1 and 20"
+while guesses_made < 6:
+    try:
+        guess = int(raw_input("please enter a number"))
+    except ValueError:
+        print "Your must input integer only"
+        
+    guesses_made += 1
+    if guess < number and guess != 0:
+        print "Your guess is too low"
+    if guess > number and guess != 0:
+        print "Your guess is too high"
+    if guess == number:
+        print "good job,", name, "! you guessed my number in", guesses_made, "guesses!"
+        break
+
+print "Nope. The number I was thinking of was", number
